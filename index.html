@@ -1,0 +1,45 @@
+<html>
+<head>
+<Script language = “javaScript”>
+function multi1(){
+a=Math.round(Math.random()*7)+2; //ceil(),floor();round();
+myform.input1.value=a;
+b=Math.round(Math.random()*8)+1;
+myform.input2.value=b;
+}
+function multi2(){
+a=myform.input1.value;
+b=myform.input2.value;
+c=myform.input3.value;
+d=a*b;
+if(c==""){
+ alert("답을 쓰세요!")}
+else if(c==d){
+ alert("정답입니다");
+ multi1();
+ myform.input3.value="";
+}
+else {
+ alert("틀렸습니다");
+ myform.input3.value="";
+}
+}
+</Script>
+</head>
+    
+<body onLoad="multi1()">
+구구단 연습입니다.<br /><br />
+<form name="myform">
+<input name="input1" type="text" size="4">
+*
+<input name="input2" type="text" size="4">
+=
+<input name="input3" type="text" size="4">
+<br><br>
+<input name="output" type="button" value=" 정답 확인 " onClick="multi2()">
+&nbsp;&nbsp;&nbsp;
+<input name="ending" type="button" value=" 나가기 " onClick="window.close()">
+</form>
+</body>
+</html>
+    
